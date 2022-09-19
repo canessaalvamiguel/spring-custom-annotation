@@ -1,5 +1,6 @@
 package com.example.demo.entities;
 
+import com.example.demo.validation.ValidateEmployeeType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,9 @@ public class Employee {
     @Email(message = "invalid email id")
     private String email;
 
+    //Custom annotation with default message
+    //@ValidateEmployeeType
+    //Custom annotation with custom message
+    @ValidateEmployeeType(message = "Invalid employeeType")
     private String employeeType;
 }
